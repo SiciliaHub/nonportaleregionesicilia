@@ -4,10 +4,14 @@
  *
  * Convert tha data about the regione Sicilia datasets from a source CSV
  * into a DCAT file. In the resulting DCAT file there are just DCAT elements.
- * Declarations, rdf/XML and ONoltogy elements have to be added later.
+ * Declarations, rdf/XML and ontology elements have to be added later.
  *
  * @author Cristiano Longo
  */
+ 
+$header=file_get_contents('header.owl.part');
+echo $header;
+ 
 $handle=fopen('php://stdin', 'r');
 if (feof($handle)){
 	echo "Empty file!";
@@ -16,26 +20,32 @@ if (feof($handle)){
 //ignore first line
 fgets($handle);
 
+//used to generate creator URIs
+$numCreators=0;
+
 while( $row = fgetcsv($handle,1000,"\t") ){
 	$id = $row[0];
-	$title = $row[5];
-	$description = $row[6];
+	$title = utf8_encode($row[5]);
+	$description = utf8_encode($row[6]);
 	$home= $row[8];
-	$creator = htmlentities($row[1]);
-	$creator_name=$row[1];
-	echo "<dcat:Dataset rdf:about=\"$id\">\n";
-	echo "\t<dcterms:title>$title</dcterms:title>\n";
-	echo "\t<rdfs:label>$title</rdfs:label>\n";
+	$creator = urlencode($row[1]);
+	$creator_name=utf8_encode($row[1]);
+	echo "\t<dcat:Dataset rdf:about=\"$id\">\n";
+	echo "\t\t<dcterms:title>$title</dcterms:title>\n";
+	echo "\t\t<rdfs:label>$title</rdfs:label>\n";
 	if ($description!=null && strlen($description)>0)
-		echo "\t<dcterms:description>$description</dcterms:description>\n";
+		echo "\t\t<dcterms:description>$description</dcterms:description>\n";
 	if ($home!=null && strlen($home)>0)
-		echo "\t<dcat:landingPage rdf:resource=\"".$home."\" />\n";	
+		echo "\t\t<dcat:landingPage rdf:resource=\"".htmlentities($home)."\" />\n";	
 
- 	echo "\t<dc:creator>\n";
-	echo "\t\t<foaf:Agent rdf:about=\"".$creator."\">\n";
-	echo "\t\t<foaf:name>$creator_name</foaf:name>\n";	
-	echo "\t</dc:creator>\n";	
+ 	echo "\t\t<dc:creator>\n";
+	echo "\t\t\t<foaf:Agent rdf:about=\"".$creator."\">\n";
+	echo "\t\t\t\t<foaf:name>$creator_name</foaf:name>\n";	
+	echo "\t\t\t</foaf:Agent>\n";
+	echo "\t\t</dc:creator>\n";	
 
-	echo "</dcat:Dataset>\n";
+	echo "\t</dcat:Dataset>\n";
 }
+
+echo "</rdf:RDF>\n";
 ?>
