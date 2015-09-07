@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE rdf:RDF [
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY time "http://www.w3.org/2006/time#" >
+    <!ENTITY dcterms "http://purl.org/dc/terms/" >
+    <!ENTITY dcat "http://www.w3.org/ns/dcat#" >
+    <!ENTITY org "http://www.w3.org/ns/org#" >
+]>
+
+<rdf:RDF xmlbase="http://opendatasicilia.it/datasetsicilia/" 
+	 xmlns:dc="&dc;"
+     xmlns:rdfs="&rdfs;"
+     xmlns:foaf="&foaf;"
+     xmlns:owl="&owl;"
+     xmlns:xsd="&xsd;"
+     xmlns:rdf="&rdf;"
+     xmlns:dcterms="&dcterms;"
+     xmlns:time="&time;"
+     xmlns:dcat="&dcat;"
+     xmlns:org="&org;">
+     
+    <owl:Ontology rdf:about="ontology">
+        <dc:creator rdf:resource="http://opendatahacklab.org/ontology/people/cristianolongo"/>
+        <rdfs:label>nonportale Regione Siciliana</rdfs:label>
+        <rdfs:comment>Una collezione non ufficiale di dataset e dati messi a 
+        disposizione in vario modo dalla Regione Siciliana.</rdfs:comment>
+        <owl:imports rdf:resource="http://www.w3.org/ns/org"/>
+        <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+		<owl:imports rdf:resource="http://www.w3.org/2006/time" />
+		<owl:imports rdf:resource="http://www.w3.org/ns/dcat.rdf" />
+    </owl:Ontology>
+    
+    <foaf:Person rdf:about="http://opendatahacklab.org/ontology/people/cristianolongo">
+        <foaf:name>Cristiano Longo</foaf:name>
+        <rdfs:label>Cristiano Longo</rdfs:label>
+		<foaf:mbox rdf:resource="mailto:longo@dmi.unict.it"/>
+		<foaf:mbox rdf:resource="mailto:cristianolongo@gmail.com" />
+    </foaf:Person>
+
