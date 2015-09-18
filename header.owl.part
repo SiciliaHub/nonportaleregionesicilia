@@ -22,7 +22,8 @@
      xmlns:dcterms="&dcterms;"
      xmlns:time="&time;"
      xmlns:dcat="&dcat;"
-     xmlns:org="&org;">
+     xmlns:org="&org;"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
      
     <owl:Ontology rdf:about="ontology">
         <dc:creator rdf:resource="http://opendatahacklab.org/ontology/people/cristianolongo"/>
@@ -33,6 +34,7 @@
         <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
 		<owl:imports rdf:resource="http://www.w3.org/2006/time" />
 		<owl:imports rdf:resource="http://www.w3.org/ns/dcat.rdf" />
+		<owl:imports rdf:resource="http://www.w3.org/2009/08/skos-reference/skos.rdf" />
     </owl:Ontology>
     
     <foaf:Person rdf:about="http://opendatahacklab.org/ontology/people/cristianolongo">
