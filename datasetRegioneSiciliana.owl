@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE rdf:RDF [
     <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
@@ -12,7 +12,7 @@
     <!ENTITY org "http://www.w3.org/ns/org#" >
 ]>
 
-<rdf:RDF xml:base="http://opendatasicilia.it/datasetsicilia/" 
+<rdf:RDF xml:base="http://nonportale.opendatasicilia.it/ontology/" 
 	 xmlns:dc="&dc;"
      xmlns:rdfs="&rdfs;"
      xmlns:foaf="&foaf;"
@@ -37,7 +37,6 @@
 		<owl:imports rdf:resource="http://www.w3.org/2009/08/skos-reference/skos.rdf" />
     </owl:Ontology>
     
-    <!--  Sept 18 2015 -->
     <foaf:Person rdf:about="http://opendatahacklab.org/ontology/people/cristianolongo">
         <foaf:name>Cristiano Longo</foaf:name>
         <rdfs:label>Cristiano Longo</rdfs:label>
@@ -91,7 +90,7 @@
 	<dcat:Dataset rdf:about="5">
 		<dcterms:title>Retribuzione dirigenti</dcterms:title>
 		<rdfs:label>Retribuzione dirigenti</rdfs:label>
-		<dcterms:description>Tabella con retribuzione annua lorda dei dirigenti che riporta di solito i seguenti campi: - Cognome;                       - Nome; - Stipendio tabellare; - Retribuzione individuale di anzianitÃ ; - Retribuzione di posizione; - Parte fissa; - IndennitÃ  vacanza contrattuale; - Rateo 13^ mensilitÃ  Dirigenti Generali; - Retribuzione accessoria di posizione;  - Dirigenti Generali Art. 64 ccrl; - Retribuzione di posizione Dirigenti Generali D.P. 26/99; - Contingenza Dirigenti Generali; - Retribuzione accessoria; - Parte variabileIndennita' di risultato; - Totale annuo emolumenti.</dcterms:description>
+		<dcterms:description>Tabella con retribuzione annua lorda dei dirigenti che riporta di solito i seguenti campi: - Cognome;                       - Nome; - Stipendio tabellare; - Retribuzione individuale di anzianità; - Retribuzione di posizione; - Parte fissa; - Indennità vacanza contrattuale; - Rateo 13^ mensilità Dirigenti Generali; - Retribuzione accessoria di posizione;  - Dirigenti Generali Art. 64 ccrl; - Retribuzione di posizione Dirigenti Generali D.P. 26/99; - Contingenza Dirigenti Generali; - Retribuzione accessoria; - Parte variabileIndennita' di risultato; - Totale annuo emolumenti.</dcterms:description>
 		<dcat:landingPage rdf:resource="http://pti.regione.sicilia.it/portal/page/portal/PIR_PORTALE/PIR_Ammtrasparente/PIR_Tvm/PIR_Datiinfopersonale/PIR_Retribuzionidirigenti" />
 		<dcat:theme>
 			<skos:Concept rdf:about="http://eurovoc.europa.eu/4273">
@@ -171,7 +170,7 @@
 	<dcat:Dataset rdf:about="11">
 		<dcterms:title>Elenco progetti finanziati dal PO FESR 2007-2013</dcterms:title>
 		<rdfs:label>Elenco progetti finanziati dal PO FESR 2007-2013</rdfs:label>
-		<dcterms:description>Elenco dei progetti finanziati dal PO FESR 2007-2013 contenente: -  il titolo del progetto; - lâasse di finanziamento;  - lâobiettivo del progetto; - la tematica di riferimento; - il beneficiario; - la provincia e il comune del beneficiario;  - lo stato del progetto (concluso o meno); -  i costi.</dcterms:description>
+		<dcterms:description>Elenco dei progetti finanziati dal PO FESR 2007-2013 contenente: -  il titolo del progetto; - l’asse di finanziamento;  - l’obiettivo del progetto; - la tematica di riferimento; - il beneficiario; - la provincia e il comune del beneficiario;  - lo stato del progetto (concluso o meno); -  i costi.</dcterms:description>
 		<dcat:landingPage rdf:resource="http://www.euroinfosicilia.it/progetti/elenco-progetti/" />
 		<dcat:theme>
 			<skos:Concept rdf:about="http://eurovoc.europa.eu/4056">
@@ -254,8 +253,8 @@
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/100181" />
 	</dcat:Dataset>
 	<dcat:Dataset rdf:about="19">
-		<dcterms:title>Elenco dei beni confiscati alla criminalitÃ  organizzata</dcterms:title>
-		<rdfs:label>Elenco dei beni confiscati alla criminalitÃ  organizzata</rdfs:label>
+		<dcterms:title>Elenco dei beni confiscati alla criminalità organizzata</dcterms:title>
+		<rdfs:label>Elenco dei beni confiscati alla criminalità organizzata</rdfs:label>
 		<dcat:landingPage rdf:resource="http://lineediattivita.dipartimento-famiglia-sicilia.it/images/documenti/2012/bimm.pdf" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/2704" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/100181" />
@@ -311,15 +310,15 @@
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/100242" />
 	</dcat:Dataset>
 	<dcat:Dataset rdf:about="24">
-		<dcterms:title>Archivio Avvisi attivitÃ  sismica</dcterms:title>
-		<rdfs:label>Archivio Avvisi attivitÃ  sismica</rdfs:label>
+		<dcterms:title>Archivio Avvisi attività sismica</dcterms:title>
+		<rdfs:label>Archivio Avvisi attività sismica</rdfs:label>
 		<dcat:landingPage rdf:resource="http://www.regione.sicilia.it/presidenza/protezionecivile/pp/archivio_sima_id=1.asp" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/4074" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/100242" />
 	</dcat:Dataset>
 	<dcat:Dataset rdf:about="25">
-		<dcterms:title>Archivio Avvisi attivitÃ  sismico-vulcanico e vulcanica</dcterms:title>
-		<rdfs:label>Archivio Avvisi attivitÃ  sismico-vulcanico e vulcanica</rdfs:label>
+		<dcterms:title>Archivio Avvisi attività sismico-vulcanico e vulcanica</dcterms:title>
+		<rdfs:label>Archivio Avvisi attività sismico-vulcanico e vulcanica</rdfs:label>
 		<dcat:landingPage rdf:resource="http://www.regione.sicilia.it/presidenza/protezionecivile/pp/archivio_sima_id=0.asp" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/4074" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/100242" />
@@ -445,7 +444,7 @@
 	<dcat:Dataset rdf:about="37">
 		<dcterms:title>Elenco dei musei, gallerie e siti archeologici</dcterms:title>
 		<rdfs:label>Elenco dei musei, gallerie e siti archeologici</rdfs:label>
-		<dcterms:description>129 schede contenenti: - Categoria - Provincia - Comune - LocalitÃ  - Denominazione - Indirizzo - Telefono - Orari - Biglietto intero - Biglietto ridotto - Biglietto cumulativo - Note</dcterms:description>
+		<dcterms:description>129 schede contenenti: - Categoria - Provincia - Comune - Località - Denominazione - Indirizzo - Telefono - Orari - Biglietto intero - Biglietto ridotto - Biglietto cumulativo - Note</dcterms:description>
 		<dcat:landingPage rdf:resource="http://www.regione.sicilia.it/beniculturali/dirbenicult/database/dipartimento_2/siti_list.asp" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/2459" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/100213" />
@@ -491,7 +490,7 @@
 	<dcat:Dataset rdf:about="43">
 		<dcterms:title>Elenco del patrimonio culturale vincolato</dcterms:title>
 		<rdfs:label>Elenco del patrimonio culturale vincolato</rdfs:label>
-		<dcterms:description>Vincoli dei beni culturali > VINCOLI ARCHEOLOGICI.pdf > VINCOLI BENI MOBILI STORICO-ARTISTICI.pdf > VINCOLI BENI IMMOBILI STORICO-ARTISTICI ED ARCHITETTONICI.pdf > VINCOLI BENI ETNOANTROPOLOGICI.pdf > VINCOLI NATURALISTICI.pdf Â  Vincoli dei beni paesaggistici  > VINCOLI PAESAGGISTICI</dcterms:description>
+		<dcterms:description>Vincoli dei beni culturali > VINCOLI ARCHEOLOGICI.pdf > VINCOLI BENI MOBILI STORICO-ARTISTICI.pdf > VINCOLI BENI IMMOBILI STORICO-ARTISTICI ED ARCHITETTONICI.pdf > VINCOLI BENI ETNOANTROPOLOGICI.pdf > VINCOLI NATURALISTICI.pdf   Vincoli dei beni paesaggistici  > VINCOLI PAESAGGISTICI</dcterms:description>
 		<dcat:landingPage rdf:resource="http://www.regione.sicilia.it/beniculturali/dirbenicult/soprintendenze/vincoli/vincolibc.html" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/2840" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/100213" />
@@ -513,8 +512,8 @@
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/100242" />
 	</dcat:Dataset>
 	<dcat:Dataset rdf:about="46">
-		<dcterms:title>Registro delle EreditÃ  Immateriali (R.E.I.)</dcterms:title>
-		<rdfs:label>Registro delle EreditÃ  Immateriali (R.E.I.)</rdfs:label>
+		<dcterms:title>Registro delle Eredità Immateriali (R.E.I.)</dcterms:title>
+		<rdfs:label>Registro delle Eredità Immateriali (R.E.I.)</rdfs:label>
 		<dcat:landingPage rdf:resource="http://pti.regione.sicilia.it/portal/page/portal/PIR_PORTALE/PIR_LaStrutturaRegionale/PIR_AssBeniCulturali/PIR_BeniCulturaliAmbientali/PIR_REIRegistrodelleEreditaImmateriali" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/2459" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/100213" />
@@ -570,7 +569,7 @@
 	<dcat:Dataset rdf:about="51">
 		<dcterms:title>Elenco dei soggetti beneficiari di concessioni e attribuzioni di vantaggi economici</dcterms:title>
 		<rdfs:label>Elenco dei soggetti beneficiari di concessioni e attribuzioni di vantaggi economici</rdfs:label>
-		<dcterms:description>Elenco dei beneficiari di concessioni e attribuzioni di vantaggi economici contenente: - beneficiario; - dati fiscali; - importo; - norma o titolo base; - ufficio; - responsabile del procedimento; - modalitÃ  di individuazione dei beneficiari; - data del provvedimento; - numero del provvedimento.</dcterms:description>
+		<dcterms:description>Elenco dei beneficiari di concessioni e attribuzioni di vantaggi economici contenente: - beneficiario; - dati fiscali; - importo; - norma o titolo base; - ufficio; - responsabile del procedimento; - modalità di individuazione dei beneficiari; - data del provvedimento; - numero del provvedimento.</dcterms:description>
 		<dcat:landingPage rdf:resource="http://www.regione.sicilia.it/amministrazioneaperta/" />
 		<dcat:theme>
 			<skos:Concept rdf:about="http://eurovoc.europa.eu/1452">
@@ -603,7 +602,7 @@
 	<dcat:Dataset rdf:about="">
 		<dcterms:title>Annuario statistico 2012</dcterms:title>
 		<rdfs:label>Annuario statistico 2012</rdfs:label>
-		<dcterms:description>Contiene i dati statistici sui principali aspetti della realtÃ  socio-economica della Regione Siciliana</dcterms:description>
+		<dcterms:description>Contiene i dati statistici sui principali aspetti della realtà socio-economica della Regione Siciliana</dcterms:description>
 		<dcat:landingPage rdf:resource="http://pti.regione.sicilia.it/portal/page/portal/PIR_PORTALE/PIR_LaStrutturaRegionale/PIR_AssessoratoEconomia/PIR_DipBilancioTesoro/PIR_ServizioStatistica/PIR_7486913.46118292" />
 		<dcat:theme>
 			<skos:Concept rdf:about="http://eurovoc.europa.eu/4256">
@@ -616,7 +615,7 @@
 	<dcat:Dataset rdf:about="53">
 		<dcterms:title>Osservatorio Regionale sul Credito</dcterms:title>
 		<rdfs:label>Osservatorio Regionale sul Credito</rdfs:label>
-		<dcterms:description>Contiene le relazioni annuali dell'Osservatorio, che analizza l'articolazione territoriale delle banche presenti in Sicilia, la rete degli sportelli e le consistenze annuali dei depositi, dei prestiti e delle sofferenze, il rapporto trimestrale sulla rilevazione dei tassi d'interesse attivi applicati sui finanziamenti concessi dalle banche in Sicilia e la relazione semestrale sull'attivitÃ  delle banche regionali</dcterms:description>
+		<dcterms:description>Contiene le relazioni annuali dell'Osservatorio, che analizza l'articolazione territoriale delle banche presenti in Sicilia, la rete degli sportelli e le consistenze annuali dei depositi, dei prestiti e delle sofferenze, il rapporto trimestrale sulla rilevazione dei tassi d'interesse attivi applicati sui finanziamenti concessi dalle banche in Sicilia e la relazione semestrale sull'attività delle banche regionali</dcterms:description>
 		<dcat:landingPage rdf:resource="http://pti.regione.sicilia.it/portal/page/portal/PIR_PORTALE/PIR_LaStrutturaRegionale/PIR_AssessoratoEconomia/PIR_Osservatorio_regionale" />
 		<dcat:theme>
 			<skos:Concept rdf:about="http://eurovoc.europa.eu/3246">
@@ -637,7 +636,7 @@
 	<dcat:Dataset rdf:about="55">
 		<dcterms:title>Microcredito per le famiglie siciliane</dcterms:title>
 		<rdfs:label>Microcredito per le famiglie siciliane</rdfs:label>
-		<dcterms:description>Contiene gli elenchi degli organismi no-profit e delle banche/intermediari finanziari convenzionati nonchÃ© la modulistica per l'adesione all'iniziativa.</dcterms:description>
+		<dcterms:description>Contiene gli elenchi degli organismi no-profit e delle banche/intermediari finanziari convenzionati nonché la modulistica per l'adesione all'iniziativa.</dcterms:description>
 		<dcat:landingPage rdf:resource="http://pti.regione.sicilia.it/portal/page/portal/PIR_PORTALE/PIR_LaStrutturaRegionale/PIR_AssessoratoEconomia/PIR_Microcreditoperlefamigliesiciliane" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/3246" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/100200" />
@@ -645,7 +644,7 @@
 	<dcat:Dataset rdf:about="56">
 		<dcterms:title>Autonomia finanziaria siciliana e federalismo fiscale</dcterms:title>
 		<rdfs:label>Autonomia finanziaria siciliana e federalismo fiscale</rdfs:label>
-		<dcterms:description>Contiene i seguenti dati:  - i dati relativi alle entrate per tributi propri e compartecipazioni a tributi erariali delle Regioni autonome e delle Province autonome. Dati di competenzaÂ - anno 2010;  - i valori procapite delle principali entrate tributarie delle Regioni autonome e delle Province autonome - anno 2008;  - le spese effettive delle Regioni autonome e delle Province autonome secondo la classificazione funzionale - anno 2010;  - la spesa per la sanitÃ  delle Regioni autonome e delle Province autonome e l'ncidenza percentuale della stessa sulle entrate tributarie;  - la quota effettiva di IRPEF percepita delle Regioni autonome e delle Province autonome rispetto a quella statutariamente attribuita;  - la stima effetti finanziari per la Regione siciliana derivanti dal D.lgs 23/11 Federalismo Municipale;  - i trasferimenti di parte corrente a carico dello Stato e della Regione ai Comuni della Sicilia.</dcterms:description>
+		<dcterms:description>Contiene i seguenti dati:  - i dati relativi alle entrate per tributi propri e compartecipazioni a tributi erariali delle Regioni autonome e delle Province autonome. Dati di competenza - anno 2010;  - i valori procapite delle principali entrate tributarie delle Regioni autonome e delle Province autonome - anno 2008;  - le spese effettive delle Regioni autonome e delle Province autonome secondo la classificazione funzionale - anno 2010;  - la spesa per la sanità delle Regioni autonome e delle Province autonome e l'ncidenza percentuale della stessa sulle entrate tributarie;  - la quota effettiva di IRPEF percepita delle Regioni autonome e delle Province autonome rispetto a quella statutariamente attribuita;  - la stima effetti finanziari per la Regione siciliana derivanti dal D.lgs 23/11 Federalismo Municipale;  - i trasferimenti di parte corrente a carico dello Stato e della Regione ai Comuni della Sicilia.</dcterms:description>
 		<dcat:landingPage rdf:resource="http://pti.regione.sicilia.it/portal/page/portal/PIR_PORTALE/PIR_LaStrutturaRegionale/PIR_AssessoratoEconomia/PIR_Federalismofiscale/PIR_FederalismoDatiapertiOpendata" />
 		<dcat:theme>
 			<skos:Concept rdf:about="http://eurovoc.europa.eu/4400">
@@ -882,8 +881,8 @@
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/100215" />
 	</dcat:Dataset>
 	<dcat:Dataset rdf:about="73">
-		<dcterms:title>Registrto associazioni di solidarietÃ  familiari</dcterms:title>
-		<rdfs:label>Registrto associazioni di solidarietÃ  familiari</rdfs:label>
+		<dcterms:title>Registrto associazioni di solidarietà familiari</dcterms:title>
+		<rdfs:label>Registrto associazioni di solidarietà familiari</rdfs:label>
 		<dcat:landingPage rdf:resource="http://lineediattivita.dipartimento-famiglia-sicilia.it/images/documenti/2013/ra106.pdf" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/5900" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/100215" />
@@ -1094,8 +1093,8 @@
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/2181" />
 	</dcat:Dataset>
 	<dcat:Dataset rdf:about="95">
-		<dcterms:title>Elenco enti che hanno comunicato l'adesione al Protocollo di LegalitÃ  "Carlo Alberto Dalla Chiesa"</dcterms:title>
-		<rdfs:label>Elenco enti che hanno comunicato l'adesione al Protocollo di LegalitÃ  "Carlo Alberto Dalla Chiesa"</rdfs:label>
+		<dcterms:title>Elenco enti che hanno comunicato l'adesione al Protocollo di Legalità "Carlo Alberto Dalla Chiesa"</dcterms:title>
+		<rdfs:label>Elenco enti che hanno comunicato l'adesione al Protocollo di Legalità "Carlo Alberto Dalla Chiesa"</rdfs:label>
 		<dcat:landingPage rdf:resource="http://pti.regione.sicilia.it/portal/page/portal/PIR_PORTALE/PIR_LaStrutturaRegionale/PIR_AssInfrastruttureMobilita/PIR_UffSpeOsservatorioRegionale/PIR_DallaChiesa" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/2704" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/100181" />
@@ -1158,7 +1157,7 @@
 	<dcat:Dataset rdf:about="102">
 		<dcterms:title>Dati delle stazioni di telemisura</dcterms:title>
 		<rdfs:label>Dati delle stazioni di telemisura</rdfs:label>
-		<dcterms:description>Temperatura dell' aria a 2 metri Radiazione solare globale Pressione atmosferica ridotta UmiditÃ  relativa dell' aria VelocitÃ  del vento 2 m media VelocitÃ  del vento 2 m massima Direzione del vento 2 m prevalente VelocitÃ  del vento 10 m media VelocitÃ  del vento 10 m massima Direzione del vento 10 m prevalente Precipitazioni ....</dcterms:description>
+		<dcterms:description>Temperatura dell' aria a 2 metri Radiazione solare globale Pressione atmosferica ridotta Umidità relativa dell' aria Velocità del vento 2 m media Velocità del vento 2 m massima Direzione del vento 2 m prevalente Velocità del vento 10 m media Velocità del vento 10 m massima Direzione del vento 10 m prevalente Precipitazioni ....</dcterms:description>
 		<dcat:landingPage rdf:resource="http://www.sias.regione.sicilia.it/corpo_dati.htm" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/5334" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/100223" />
@@ -1166,7 +1165,7 @@
 	<dcat:Dataset rdf:about="103">
 		<dcterms:title>Mappe giornaliere</dcterms:title>
 		<rdfs:label>Mappe giornaliere</rdfs:label>
-		<dcterms:description>Temperatura Minima giornaliera                                       Temperatura Massima giornaliera Precipitazione Totale giornaliera Radiazione Solare Giornaliera UmiditÃ  Relativa Media Diurna UmiditÃ  Relativa Media Notturna</dcterms:description>
+		<dcterms:description>Temperatura Minima giornaliera                                       Temperatura Massima giornaliera Precipitazione Totale giornaliera Radiazione Solare Giornaliera Umidità Relativa Media Diurna Umidità Relativa Media Notturna</dcterms:description>
 		<dcat:landingPage rdf:resource="http://www.sias.regione.sicilia.it/NHEOWLA01.html" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/5334" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/100223" />
@@ -1339,7 +1338,7 @@
 	<dcat:Dataset rdf:about="120">
 		<dcterms:title>Punti Unici di Accesso (PUA)</dcterms:title>
 		<rdfs:label>Punti Unici di Accesso (PUA)</rdfs:label>
-		<dcterms:description>Sono sportelli informativi sul territorio dove Ã¨ possibile rivolgersi per avere informazioni sui servizi come l'ADI - Assistenza Domiciliare Integrata - e su come accedervi, per scegliere il medico/pediadra, per ottenere esenzioni ticket e/o invaliditÃ  civile</dcterms:description>
+		<dcterms:description>Sono sportelli informativi sul territorio dove è possibile rivolgersi per avere informazioni sui servizi come l'ADI - Assistenza Domiciliare Integrata - e su come accedervi, per scegliere il medico/pediadra, per ottenere esenzioni ticket e/o invalidità civile</dcterms:description>
 		<dcat:landingPage rdf:resource="http://costruiresalute.it/pua" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/5900" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/2479" />
@@ -1407,8 +1406,8 @@
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/2479" />
 	</dcat:Dataset>
 	<dcat:Dataset rdf:about="128">
-		<dcterms:title>VALUTAZIONE DEGLI INDICATORI DI SALUTE PERINATALE (ANNI 2009-2011) E ANDAMENTO DELLA MORTALITAâ INFANTILE IN SICILIA (ANNI 2004-2011)</dcterms:title>
-		<rdfs:label>VALUTAZIONE DEGLI INDICATORI DI SALUTE PERINATALE (ANNI 2009-2011) E ANDAMENTO DELLA MORTALITAâ INFANTILE IN SICILIA (ANNI 2004-2011)</rdfs:label>
+		<dcterms:title>VALUTAZIONE DEGLI INDICATORI DI SALUTE PERINATALE (ANNI 2009-2011) E ANDAMENTO DELLA MORTALITA’ INFANTILE IN SICILIA (ANNI 2004-2011)</dcterms:title>
+		<rdfs:label>VALUTAZIONE DEGLI INDICATORI DI SALUTE PERINATALE (ANNI 2009-2011) E ANDAMENTO DELLA MORTALITA’ INFANTILE IN SICILIA (ANNI 2004-2011)</rdfs:label>
 		<dcat:landingPage rdf:resource="http://pti.regione.sicilia.it/portal/page/portal/PIR_PORTALE/PIR_LaStrutturaRegionale/PIR_AssessoratoSalute/PIR_AreeTematiche/PIR_Epidemiologia/PIR_Saluteriproduttiva/Valutazione_indicatori_salute_perinatale_Sicilia_2011.pdf" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/5900" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/2479" />
@@ -1492,8 +1491,8 @@
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/4619" />
 	</dcat:Dataset>
 	<dcat:Dataset rdf:about="138">
-		<dcterms:title>RAPPORTO SULLâABUSIVISMO EDILIZIO  E   SULLO  STATO  DI DEFINIZIONE  DELLE  ISTANZE  DI  SANATORIA  EDILIZIA</dcterms:title>
-		<rdfs:label>RAPPORTO SULLâABUSIVISMO EDILIZIO  E   SULLO  STATO  DI DEFINIZIONE  DELLE  ISTANZE  DI  SANATORIA  EDILIZIA</rdfs:label>
+		<dcterms:title>RAPPORTO SULL’ABUSIVISMO EDILIZIO  E   SULLO  STATO  DI DEFINIZIONE  DELLE  ISTANZE  DI  SANATORIA  EDILIZIA</dcterms:title>
+		<rdfs:label>RAPPORTO SULL’ABUSIVISMO EDILIZIO  E   SULLO  STATO  DI DEFINIZIONE  DELLE  ISTANZE  DI  SANATORIA  EDILIZIA</rdfs:label>
 		<dcterms:description>Il rapporto redatto dal Dipartimento dell'Urbanistica delinea un quadro generale del fenomeno dell'abusivismo attraverso l'elaborazione dei dati e delle informazioni a livello sia comunale che provinciale desunti dal sistema informativo sull'abusivismo SIAB</dcterms:description>
 		<dcat:landingPage rdf:resource="http://pti.regione.sicilia.it/portal/page/portal/PIR_PORTALE/PIR_LaStrutturaRegionale/PIR_Assessoratoregionaledelterritorioedellambiente/PIR_DipUrbanistica/PIR_Servizio5/PIR_BancaDatiUO53" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/4809" />
@@ -1502,7 +1501,7 @@
 	<dcat:Dataset rdf:about="139">
 		<dcterms:title>Annuario regionale dei dati ambientali</dcterms:title>
 		<rdfs:label>Annuario regionale dei dati ambientali</rdfs:label>
-		<dcterms:description>Annuario regionale dei dati ambientali anno 2013. Articolato in otto capitoli: Capitolo 1 QualitÃ  dellâaria Capitolo 2 QualitÃ  delle acque Capitolo 3 Siti contaminati Capitolo 4 Rifiuti Capitolo 5 Agenti fisici Capitolo 6  AttivitÃ  di Controllo Capitolo 7 Laboratori Specializzati Capitolo 8 Certificazione</dcterms:description>
+		<dcterms:description>Annuario regionale dei dati ambientali anno 2013. Articolato in otto capitoli: Capitolo 1 Qualità dell’aria Capitolo 2 Qualità delle acque Capitolo 3 Siti contaminati Capitolo 4 Rifiuti Capitolo 5 Agenti fisici Capitolo 6  Attività di Controllo Capitolo 7 Laboratori Specializzati Capitolo 8 Certificazione</dcterms:description>
 		<dcat:landingPage rdf:resource="http://www.arpa.sicilia.it/documentazione/annuario-regionale-dei-dati-ambientali-anno-2013/" />
 		<dcat:theme>
 			<skos:Concept rdf:about="http://eurovoc.europa.eu/177">
@@ -1513,9 +1512,9 @@
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/100242" />
 	</dcat:Dataset>
 	<dcat:Dataset rdf:about="140">
-		<dcterms:title>Bollettino di sintesi dei dati di Monitoraggio Qualita' dellâAria</dcterms:title>
-		<rdfs:label>Bollettino di sintesi dei dati di Monitoraggio Qualita' dellâAria</rdfs:label>
-		<dcterms:description>Sono riportate le stazioni fisse di monitoraggio per la qualita' dellâaria di A.R.P.A. Sicilia ed i relativi inquinanti monitorati alla data odierna.</dcterms:description>
+		<dcterms:title>Bollettino di sintesi dei dati di Monitoraggio Qualita' dell’Aria</dcterms:title>
+		<rdfs:label>Bollettino di sintesi dei dati di Monitoraggio Qualita' dell’Aria</rdfs:label>
+		<dcterms:description>Sono riportate le stazioni fisse di monitoraggio per la qualita' dell’aria di A.R.P.A. Sicilia ed i relativi inquinanti monitorati alla data odierna.</dcterms:description>
 		<dcat:landingPage rdf:resource="http://www.arpa.sicilia.it/storage/#titoloinizio" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/177" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/100242" />
@@ -1531,7 +1530,7 @@
 	<dcat:Dataset rdf:about="142">
 		<dcterms:title>Provvedimenti VIA</dcterms:title>
 		<rdfs:label>Provvedimenti VIA</rdfs:label>
-		<dcterms:description>Banca dati provvedimenti VIA (Verifica assoggettabilitÃ  - Giudizio di compatibilitÃ  ambientale - Rifiuti e cave)</dcterms:description>
+		<dcterms:description>Banca dati provvedimenti VIA (Verifica assoggettabilità - Giudizio di compatibilità ambientale - Rifiuti e cave)</dcterms:description>
 		<dcat:landingPage rdf:resource="http://www.artasicilia.eu/old_site/web/vas/assog/index.php" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/4074" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/100242" />
@@ -1605,7 +1604,7 @@
 	<dcat:Dataset rdf:about="150">
 		<dcterms:title></dcterms:title>
 		<rdfs:label></rdfs:label>
-		<dcterms:description>Ortofoto 2007 Parchi e Riserve Area di Raccolta (boschi da seme) Aree ecologicamente omogenee Aree a prioritÃ  di intervento Vincolo idrogeologico Distaccamenti Forestali  Anno 2007 â Aree percorse dal fuoco Anno 2008 â Aree percorse dal fuoco Anno 2009 â Aree percorse dal fuoco Anno 2010 â Aree percorse dal fuoco Anno 2011 â Aree percorse dal fuoco (NEW) Anno 2012 â Aree percorse dal fuoco (NEW) Boschi Vetusti Carta del rischio invernale di incendio Carta del rischio estivo di incendio Modelli di combustibile  Carta Forestale - Categorie Forestali  Carta Forestale - Classi Inventariali  Carta Forestale - def. DLgs 227/01 Carta Forestale - def. LR 19/96 Bacini montani (proposta di perimentazione, sensi L.R. 16/96)  Infrastrutture antincendio</dcterms:description>
+		<dcterms:description>Ortofoto 2007 Parchi e Riserve Area di Raccolta (boschi da seme) Aree ecologicamente omogenee Aree a priorità di intervento Vincolo idrogeologico Distaccamenti Forestali  Anno 2007 – Aree percorse dal fuoco Anno 2008 – Aree percorse dal fuoco Anno 2009 – Aree percorse dal fuoco Anno 2010 – Aree percorse dal fuoco Anno 2011 – Aree percorse dal fuoco (NEW) Anno 2012 – Aree percorse dal fuoco (NEW) Boschi Vetusti Carta del rischio invernale di incendio Carta del rischio estivo di incendio Modelli di combustibile  Carta Forestale - Categorie Forestali  Carta Forestale - Classi Inventariali  Carta Forestale - def. DLgs 227/01 Carta Forestale - def. LR 19/96 Bacini montani (proposta di perimentazione, sensi L.R. 16/96)  Infrastrutture antincendio</dcterms:description>
 		<dcat:landingPage rdf:resource="http://sif.regione.sicilia.it/ilportale/servizi-wms" />
 		<dcat:theme>
 			<skos:Concept rdf:about="http://eurovoc.europa.eu/3017">
@@ -1624,15 +1623,15 @@
 	<dcat:Dataset rdf:about="151">
 		<dcterms:title>Perimetrazione bacini montani</dcterms:title>
 		<rdfs:label>Perimetrazione bacini montani</rdfs:label>
-		<dcterms:description>I perimetri dei Bacini montani sono altresÃ¬ disponibili sui servizi WebGIS (tra i layer della "cartografia tematica") e WMS</dcterms:description>
+		<dcterms:description>I perimetri dei Bacini montani sono altresì disponibili sui servizi WebGIS (tra i layer della "cartografia tematica") e WMS</dcterms:description>
 		<dcat:landingPage rdf:resource="http://sif.regione.sicilia.it/webgis" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/2979" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/2445" />
 	</dcat:Dataset>
 	<dcat:Dataset rdf:about="152">
-		<dcterms:title>Piano per lâAssetto Idrogeologico</dcterms:title>
-		<rdfs:label>Piano per lâAssetto Idrogeologico</rdfs:label>
-		<dcterms:description>strumento conoscitivo, normativo e tecnico-operativo mediante il quale sono pianificate e programmate le azioni, gli interventi e le norme dâuso riguardanti la difesa dal rischio idrogeologico del territorio siciliano</dcterms:description>
+		<dcterms:title>Piano per l’Assetto Idrogeologico</dcterms:title>
+		<rdfs:label>Piano per l’Assetto Idrogeologico</rdfs:label>
+		<dcterms:description>strumento conoscitivo, normativo e tecnico-operativo mediante il quale sono pianificate e programmate le azioni, gli interventi e le norme d’uso riguardanti la difesa dal rischio idrogeologico del territorio siciliano</dcterms:description>
 		<dcat:landingPage rdf:resource="http://www.sitr.regione.sicilia.it/pai/index.htm" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/568" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/100248" />
@@ -1658,7 +1657,7 @@
 	<dcat:Dataset rdf:about="154">
 		<dcterms:title>I luoghi da scoprire</dcterms:title>
 		<rdfs:label>I luoghi da scoprire</rdfs:label>
-		<dcterms:description>Mete e  percorsi turistici alternativi, alla scoperta delle localitÃ  siciliane meno conosciute</dcterms:description>
+		<dcterms:description>Mete e  percorsi turistici alternativi, alla scoperta delle località siciliane meno conosciute</dcterms:description>
 		<dcat:landingPage rdf:resource="http://pti.regione.sicilia.it/portal/page/portal/SIT_PORTALE/SIT_DIR_AREE_TEMATICHE/the%20infinite%20island/itinerari%20alternativi" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/4470" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/100212" />
@@ -1742,16 +1741,16 @@
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/100212" />
 	</dcat:Dataset>
 	<dcat:Dataset rdf:about="166">
-		<dcterms:title>Mappa dei principali musei, dei teatri antichi e dei luoghi piÃ¹ suggestivi della Sicilia</dcterms:title>
-		<rdfs:label>Mappa dei principali musei, dei teatri antichi e dei luoghi piÃ¹ suggestivi della Sicilia</rdfs:label>
+		<dcterms:title>Mappa dei principali musei, dei teatri antichi e dei luoghi più suggestivi della Sicilia</dcterms:title>
+		<rdfs:label>Mappa dei principali musei, dei teatri antichi e dei luoghi più suggestivi della Sicilia</rdfs:label>
 		<dcat:landingPage rdf:resource="http://www.regione.sicilia.it/turismo/web_turismo/cartografia/mappa_musei_teatri_antichi.asp" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/4470" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/100212" />
 	</dcat:Dataset>
 	<dcat:Dataset rdf:about="167">
-		<dcterms:title>AttrattivitÃ  Turistica Sicilia</dcterms:title>
-		<rdfs:label>AttrattivitÃ  Turistica Sicilia</rdfs:label>
-		<dcterms:description>Presentazione contenente una ricerca di marketing dell'attrattivitÃ  turistica della Sicilia</dcterms:description>
+		<dcterms:title>Attrattività Turistica Sicilia</dcterms:title>
+		<rdfs:label>Attrattività Turistica Sicilia</rdfs:label>
+		<dcterms:description>Presentazione contenente una ricerca di marketing dell'attrattività turistica della Sicilia</dcterms:description>
 		<dcat:landingPage rdf:resource="http://www.attrattivitasicilia.com/index.php/materiali" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/3342" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/100220" />
@@ -1775,7 +1774,7 @@
 	<dcat:Dataset rdf:about="170">
 		<dcterms:title>Albo regionale siciliano degli Accompagnatori Turistici</dcterms:title>
 		<rdfs:label>Albo regionale siciliano degli Accompagnatori Turistici</rdfs:label>
-		<dcterms:description>Ã accompagnatore turistico chi, per professione, accompagna persone singole o gruppi di persone nei viaggi attraverso il territorio nazionale o allâestero; fornisce elementi significativi e notizie di interesse turistico sulle zone di transito al di fuori dellâambito di competenza delle guide.</dcterms:description>
+		<dcterms:description>È accompagnatore turistico chi, per professione, accompagna persone singole o gruppi di persone nei viaggi attraverso il territorio nazionale o all’estero; fornisce elementi significativi e notizie di interesse turistico sulle zone di transito al di fuori dell’ambito di competenza delle guide.</dcterms:description>
 		<dcat:landingPage rdf:resource="http://pti.regione.sicilia.it/portal/page/portal/PIR_PORTALE/PIR_LaStrutturaRegionale/PIR_TurismoSportSpettacolo/PIR_Turismo/PIR_Guideturistiche/Elenco%20Accompagnatori%20Turistici_0.pdf" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/4470" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/100212" />
@@ -1799,7 +1798,7 @@
 	<dcat:Dataset rdf:about="173">
 		<dcterms:title>Elenco centri di immersione e scuole subacquee siciliane</dcterms:title>
 		<rdfs:label>Elenco centri di immersione e scuole subacquee siciliane</rdfs:label>
-		<dcterms:description>E' istituito presso il Dipartimento turismo sport e spettacolo l'elenco degli istruttori subacquei che esercitano l'attivitÃ  di cui al comma 7 dell'art.1 del presente decreto, nell'ambito del territorio della Regione Siciliana.</dcterms:description>
+		<dcterms:description>E' istituito presso il Dipartimento turismo sport e spettacolo l'elenco degli istruttori subacquei che esercitano l'attività di cui al comma 7 dell'art.1 del presente decreto, nell'ambito del territorio della Regione Siciliana.</dcterms:description>
 		<dcat:landingPage rdf:resource="http://pti.regione.sicilia.it/portal/page/portal/PIR_PORTALE/PIR_LaStrutturaRegionale/PIR_TurismoSportSpettacolo/PIR_Turismo/PIR_Guideturistiche/Elenco%20centri%20immersione%20scuole%20sub.pdf" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/3342" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/100220" />
@@ -1807,7 +1806,7 @@
 	<dcat:Dataset rdf:about="174">
 		<dcterms:title>Sicilia in onda</dcterms:title>
 		<rdfs:label>Sicilia in onda</rdfs:label>
-		<dcterms:description>Archivio di documenti visivi (curato dalla Rai) sulla Sicilia, suddiviso nelle seguenti tematiche: - Cultura - Spettacolo - Ambiente - SocietÃ  - Storia - Musica - Politica - Sport</dcterms:description>
+		<dcterms:description>Archivio di documenti visivi (curato dalla Rai) sulla Sicilia, suddiviso nelle seguenti tematiche: - Cultura - Spettacolo - Ambiente - Società - Storia - Musica - Politica - Sport</dcterms:description>
 		<dcat:landingPage rdf:resource="http://www.siciliainonda.rai.it/dl/sicilia/hp/Page-6bbde67e-e04d-48c0-809f-44d388256eee.html" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/3342" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/100220" />
@@ -1832,9 +1831,9 @@
 		</dcat:theme>
 	</dcat:Dataset>
 	<dcat:Dataset rdf:about="176">
-		<dcterms:title>Profilo e AttivitÃ  Deputati</dcterms:title>
-		<rdfs:label>Profilo e AttivitÃ  Deputati</rdfs:label>
-		<dcterms:description>Scheda contenente: - dati legislatura; - cariche assunte; - attivitÃ  parlamentare (primo firmatario); - attivitÃ  parlamentare (cofirmatario).</dcterms:description>
+		<dcterms:title>Profilo e Attività Deputati</dcterms:title>
+		<rdfs:label>Profilo e Attività Deputati</rdfs:label>
+		<dcterms:description>Scheda contenente: - dati legislatura; - cariche assunte; - attività parlamentare (primo firmatario); - attività parlamentare (cofirmatario).</dcterms:description>
 		<dcat:landingPage rdf:resource="http://www.ars.sicilia.it/deputati/default.jsp" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/1344" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/2245" />
@@ -1850,7 +1849,7 @@
 	<dcat:Dataset rdf:about="178">
 		<dcterms:title>Commissioni parlamentari</dcterms:title>
 		<rdfs:label>Commissioni parlamentari</rdfs:label>
-		<dcterms:description>elenco delle commissioni parlamentari che si occupano dellâesame di determinati disegni di legge e di commissioni dâindagine e di studio su determinate materie e argomenti</dcterms:description>
+		<dcterms:description>elenco delle commissioni parlamentari che si occupano dell’esame di determinati disegni di legge e di commissioni d’indagine e di studio su determinate materie e argomenti</dcterms:description>
 		<dcat:landingPage rdf:resource="http://www.ars.sicilia.it/organi/commissioni/default.jsp" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/1344" />
 		<dcat:theme rdf:resource="http://eurovoc.europa.eu/2245" />

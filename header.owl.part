@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE rdf:RDF [
     <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
@@ -12,7 +12,7 @@
     <!ENTITY org "http://www.w3.org/ns/org#" >
 ]>
 
-<rdf:RDF xmlbase="http://opendatasicilia.it/datasetsicilia/" 
+<rdf:RDF xml:base="http://nonportale.opendatasicilia.it/ontology/" 
 	 xmlns:dc="&dc;"
      xmlns:rdfs="&rdfs;"
      xmlns:foaf="&foaf;"
