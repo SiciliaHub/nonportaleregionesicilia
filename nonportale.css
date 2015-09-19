@@ -45,7 +45,7 @@ header h1{
 }
 
 p{
-	margin : 0 2em 0 2em;
+	margin : 0 2em 1em 2em;
 	padding : 0 0 0 0;	
 }
 
@@ -108,17 +108,15 @@ a:hover{
 }
 
 /* NAVIGATION */
-nav{
+/*nav{
 	clear:left;
 	display : inline;
-	border : solid 2px;
-	border-radius : 0.5em;
 	padding:0.5em;
-}
+}*/
 
 
 nav img{
-	height:1.5em;
+	height:2em;
 	vertical-align : middle;
 	margin-right:0.2em;
 	margin-left:0.3em;
