@@ -3,76 +3,44 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>NON-Portale Regione Siciliana</title>
-		<link rel="stylesheet" type="text/css" href="http://opendatahacklab.github.io/odhl.css" />
+		<link rel="stylesheet" type="text/css" href="nonportale.css" />
 		<script type="text/javascript" src="http://opendatahacklab.github.io/sparql_suite/sparql_processor.js"></script>
 		<script type="text/javascript" src="http://opendatahacklab.github.io/sparql_suite/dcat_sparql_processor.js"></script>
 	</head>
 <body>
 	<header class="main-header" id="top">
+		<a href="http://opendatasicilia.it" title="Link to opendatasicilia blog">
+			<img class="logo" src="img/logo_opendatasicilia_white.png" alt="the opendatahacklab logo" />
+		</a>
 		<h1>NON-Portale Regione Siciliana</h1>
-		<p class="subtitle">Portale <em>NON-ufficiale</em> dei dataset della Regione Siciliana - Powered by 
-			<a href="http://github.com"><img alt="GitHub" src="http://opendatahacklab.github.io/imgs/GitHub_Logo.png" /></a>
+		<p class="subtitle">Powered by 
+			<a href="http://github.com"><img style="background-color : white" alt="GitHub" src="http://opendatahacklab.github.io/imgs/GitHub_Logo.png" /></a>
 			<a href="http://dydra.com"><img alt="dydra.com" src="http://opendatahacklab.github.io/imgs/dydra-logo-24pt.png" /></a>
-			<a href="http://opendatahacklab.org"><img alt="opendatahacklab" src="http://opendatahacklab.github.io/imgs/logo_cog4_ter.png" /></a>
 		</p>
+		<!--
 		<nav>
 			<a href="https://github.com/opendatahacklab/opendatahacklab.github.io" alt="Source Code" title="GitHub repository"><img src="http://opendatahacklab.github.io/imgs/GitHub-Mark-64px.png" /></a>
 			<a href="data.html"><img  src="http://opendatahacklab.github.io/imgs/rdf.png" /></a>
 		</nav>
+		-->
 	</header>
+	<section id="intro">
+	<p>TODO inserire descrizione del non portale, di ods15 e del team.</p>
+	</section>
+	
 	<section id="datasets">
 		<p id="count"></p>
 		<p class="loading" id="loading">Loading ...</p>
 	</section>
+	<section id="datasets">
+		<header><h2>Datasets of Regione Siciliana</h2></header>
+		<p id="count"></p>
+		<p class="loading" id="loading">Loading ...</p>
+	</section>
 	<script type="text/javascript">
-var count=0;	
-var processor = new DCATProcessor();
-
 var loadingItem = document.getElementById("loading");
 var container = document.getElementById("datasets");
-
-processor.processDataset = function(dataset){	
-	count++;
-	var article = document.createElement("article");
-	container.insertBefore(article, loadingItem);
-		
-	var title = document.createElement("h2");
-    title.appendChild(document.createTextNode(dataset.title));	
-	article.appendChild(title);
-	
-	if (dataset.description!=null && dataset.description.length>0){
-		var description = document.createElement("p");
-		description.appendChild(document.createTextNode(dataset.description));
-		article.appendChild(description);
-	}
-	
-	var nav =document.createElement("nav");	
-	article.appendChild(nav);
-	
-	var back = document.createElement("a");
-	back.href="#top";
-	back.appendChild(document.createTextNode("Back to top"));
-	nav.appendChild(back);
-
-	if (dataset.landingPage!=null){
-		var landing = document.createElement("a");
-		nav.appendChild(landing);
-		landing.href=dataset.landingPage;
-		landing.title="Dataset landing page";
-		landing.target="_blank";
-		
-		var landingImg = document.createElement("img");
-		landingImg.src="https://upload.wikimedia.org/wikipedia/commons/6/6a/External_link_font_awesome.svg";
-		landing.appendChild(landingImg);
-	}		
-};
-
-processor.flush = function(){ 
-	container.removeChild(loadingItem);
-	document.getElementById("count").
-		appendChild(document.createTextNode("Trovati "+count+" dataset."));
-};
-
+var processor = createDCAT2HTMLProcessor(container, loadingItem, null, null);
 sparql_query("http://dydra.com/cristianolongo/dataset-regione-sicilia-ods15/sparql", processor);
 	</script>
 </body>
