@@ -36,13 +36,11 @@ while( $row = fgetcsv($handle,2000,"\t") ){
 	if (count($row)<11) 
 		echo "<!-- invalid number of columns in row $id -->\n";
 	
-//	$title = utf8_encode(htmlentities($row[7],ENT_COMPAT,'utf-8'));
-	$title = utf8_encode($row[7]);
-	$description = utf8_encode($row[8]);
-//	$home= utf8_encode(htmlentities($row[10],ENT_COMPAT,'utf-8'));
+	$title = $row[7];
+	$description = $row[8];
 	$home= $row[10];
-	$creator = urlencode($row[1]);
-	$creator_name=utf8_encode(htmlentities($row[1],ENT_COMPAT,'utf-8'));
+//	$creator = urlencode($row[1]);
+//	$creator_name=utf8_encode(htmlentities($row[1],ENT_COMPAT,'utf-8'));
 	
 	$theme_url=$row[4];
 	$theme_name=$row[3];
