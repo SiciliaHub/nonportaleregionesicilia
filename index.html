@@ -20,7 +20,7 @@
 		</p>
 		<nav>
 			<a href="https://github.com/opendatahacklab/nonportaleregionesicilia.git" alt="Source Code" title="GitHub repository"><img src="img/GitHub-Mark-Light-64px.png" /></a>
-			<!--a href="data.html"><img  src="http://opendatahacklab.github.io/imgs/rdf.png" /></a-->
+			<a href="#data" title="Open Data"><img  src="img/rdf_white.png" /></a>
 		</nav>
 	</header>
 	<section id="intro">
@@ -49,16 +49,32 @@
 		<p id="count"></p>
 		<p class="loading" id="loading">Loading ...</p>
 	</section>
-	<section id="datasets">
-		<header><h2>Datasets of Regione Siciliana</h2></header>
-		<p id="count"></p>
-		<p class="loading" id="loading">Loading ...</p>
-	</section>
-	<script type="text/javascript">
+	<section id="listing">
+		<script type="text/javascript">
 var loadingItem = document.getElementById("loading");
 var container = document.getElementById("datasets");
 var processor = createDCAT2HTMLProcessor(container, loadingItem, null, null);
 sparql_query("http://dydra.com/cristianolongo/dataset-regione-sicilia-ods15/sparql", processor);
-	</script>
+		</script>
+		
+		<p class="top"><a href="#top">Torna Su</a></p>
+	</section>
+	<section id="data">
+		<header><h2>Accesso ai Dati</h2></header>
+		<p>L'elenco presentato in questa pagina &egrave; disponibile come
+		<a href="https://docs.google.com/spreadsheets/d/15cFU9v2x3ACb1IPcVE9Xg3wc5fuay8NAYDXQnoMcOFw/edit#gid=968762763">foglio Google Doc</a>.
+		A partire da questo, &egrave; stata generata, usando lo script <code>csv2dcat.php</code>,
+		una <a href="datasetRegioneSiciliana.owl">ontologia</a> <a href="http://www.w3.org/TR/owl2-primer/">OWL2</a> nella
+		quale il vocabolario <a href="http://www.w3.org/TR/vocab-dcat/">DCAT</a> viene impiegato 
+		per modellare i dataset. Sono state poi effettuate tutte le inferenze semantiche dall'ontologia 
+		attraverso il reasoner <a href="https://github.com/complexible/pellet">pellet</a>.
+		L'ontologia cos&igrave; arricchita &egrave; stata infine caricata su un repository
+		messo a disposizione da <a href="http://dydra.com">Dydra</a>. Tale repository
+		fornisce anche un <a href="http://dydra.com/cristianolongo/dataset-regione-sicilia-ods15/sparql">endpoint SPARQL</a>
+		che pu&ograve; essere liberamente interrogato.</p>
+
+		<p class="top"><a href="#top">Torna Su</a></p>		
+	</section>
+	
 </body>
 </html>
