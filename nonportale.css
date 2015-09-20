@@ -122,8 +122,28 @@ nav img{
 	margin-left:0.3em;
 }
 
+header.main-header  a{
+	color : white;
+	font-weight : bold;
+	text-decoration : none;
+}
+
 p.top{
-	text-align : right;
+	clear:both;
+	float: right;
+	display : inline;
+	border : solid 2px;
+	border-radius : 2em;
+	padding:0.5em;
+	background-color:#082E3B;
+	color : white;
+	border:none;
+}
+
+p.top a{
+	color : inherit;
+	font-weight : bold;
+	text-decoration : none;
 }
 
 /* CONTENTS */
@@ -136,7 +156,7 @@ ol.iconlist{
 }
 
 ol.iconlist img {
-	height : 3em;
+	width : 5em;
 	vertical-align : middle;
 	margin : 0.3em 1em 1em 1em;
 	float : left;
