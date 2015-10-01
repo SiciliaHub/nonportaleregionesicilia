@@ -7,9 +7,9 @@
 	<meta name="description" content="Il Non Portale della Regione Siciliana">
 	<meta name="author" content="OpenDataSicilia">
 
-	<meta property="og:image" content="http://petrusino.opendatasicilia.it/img/share.jpg" />
+<!-- 	<meta property="og:image" content="http://petrusino.opendatasicilia.it/img/share.jpg" />
 	<meta property="og:title" content="Petrusino, ... perché certi siti, apps, mappe, servizi sono un po' come il prezzemolo e non è facili distinguerli ..." />
-	<meta property="og:url" content="http://petrusino.opendatasicilia.it" />
+	<meta property="og:url" content="http://petrusino.opendatasicilia.it" /> -->
 
 	<!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
 	<!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
@@ -74,7 +74,7 @@
 								<a href="./index.html">Home</a>
 							</li>
 							<li>
-								<a href="#">Linked Open Data</a>
+								<a href="./lindex.html">Linked Open Data</a>
 							</li>							
 							<!-- <li>
 								<a href="./proponi.html">Proponi</a>
@@ -152,9 +152,9 @@
 					<div ex:role="exhibit-view" 
 					ex:viewClass="Exhibit.TabularView"  
 					ex:label="Table"  
-					ex:columns=".label,.descrizione,.completo"  
-					ex:columnLabels="Nome, Descrizione,Completo" 
-					ex:columnFormats="list,list,list"
+					ex:columns=".label,.descrizione"  
+					ex:columnLabels="Nome, Descrizione" 
+					ex:columnFormats="list,list"
 					ex:sortColumn="0"
 					ex:sortAscending="true"
 					ex:tableStyler="tableStyler"> 
@@ -164,7 +164,6 @@
 								<tr>
 									<td><a ex:href-content=".pagina_web" ex:onclick-subcontent="trackOutboundLink('{{.pagina_web}}'); return false;" target="_blank"><strong><span ex:content=".label" class="petrusino"></strong></span></a></td>
 									<td><span ex:content=".descrizione"></td>
-									<td><span ex:content=".completo"></span></td>
 								</tr>
 							</table>
 						</div>
