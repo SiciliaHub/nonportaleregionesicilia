@@ -1,13 +1,5 @@
-body{
-	margin: 0 0 0 0;
-	padding: 0 0 0 0;
-	background-color: white;
-	color:#082E3B;
-	font-family : Arial, Helvetica, sans-serif;
-}
-
 header.main-header{
-	background-color:#082E3B;
+	background-color:#EC1B23;
 	color : white;
 	margin:0 0 0 0;
 	padding: 1em 1em 1em 1em;
@@ -45,7 +37,7 @@ header h1{
 }
 
 p{
-	margin : 0 2em 1em 2em;
+	/*margin : 0 2em 1em 2em;*/
 	padding : 0 0 0 0;	
 }
 
@@ -56,9 +48,9 @@ p.subtitle {
 }
 
 article{
-	margin : 0 2em 0 2em;
+	/*margin : 0 2em 0 2em;*/
 	padding : 0 0 0 0;
-	border : solid 2px;
+	/*border : solid 2px;*/
 /*	border-left : dashed #aaaaaa 2px; */
 }
 
@@ -89,7 +81,7 @@ h2{
 
 article h2{
 	color : white;
-	background-color:#082E3B;
+	background-color:#EC1B23;
 	margin: 0 0 0 0;
 	padding : 0.2em 0.2em 0.2em 0.2em;	
 	font-weight:normal;
@@ -135,20 +127,20 @@ p.top{
 	border : solid 2px;
 	border-radius : 2em;
 	padding:0.5em;
-	background-color:#082E3B;
+	background-color:#EC1B23;
 	color : white;
 	border:none;
 }
 
 p.top a{
-	color : inherit;
+	color : white !important;
 	font-weight : bold;
 	text-decoration : none;
 }
 
 /* CONTENTS */
 section{
-	margin: 4em 0 2em 0;
+	margin: 1em 0 2em 0;
 }
 
 ol.iconlist{
