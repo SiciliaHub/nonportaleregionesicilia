@@ -91,7 +91,9 @@ a:link, a:visited,  a:active, a:hover{
 	color : #73B84B;
 	text-decoration : underline;
 }
-
+.navbar-collapse a:link{
+	font-weight: normal;
+}
 a:link{
 	font-weight: bold;
 }
