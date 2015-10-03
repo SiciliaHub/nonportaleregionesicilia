@@ -34,6 +34,7 @@
         {
             "tema_dati_gov": "Ambiente e meteo",
             "label": "Piano di Gestione UNESCO Isole Eolie",
+            "formato": "zip",
             "keywords": [
                 "cibo",
                 "turismo"
