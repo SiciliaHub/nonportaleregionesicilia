@@ -38,9 +38,9 @@
     <!-- <link rel="exhibit/data" 
     type="application/jsonp"
     href="https://spreadsheets.google.com/feeds/list/19tfYTm2jFsxftCEkRu7ZjUPirxrWB5BELPvcWKIt92U/od6/public/basic?alt=json-in-script"
-    ex:converter="googleSpreadsheets" /> -->
+    data-ex-converter="googleSpreadsheets" /> -->
     <!--<link href="http://194.119.209.93:8088/nonportale/sourcejson.php" type="application/json" rel="exhibit-data" />-->
-	<link href="./data/dati.txt" ex:properties="tema_dati_gov,label,formato,keywords,descrizione,ufficio,URL_pubblicazione,pagina_web" ex:valueSeparator=";" type="text/tsv" rel="exhibit/data"  ex:hasColumnTitles="true" />
+	<link href="./data/dati.txt" data-ex-properties="tema_dati_gov,label,formato,keywords,descrizione,ufficio,URL_pubblicazione,pagina_web" data-ex-valueSeparator=";" type="text/tsv" rel="exhibit-data"  data-ex-hasColumnTitles="true" />
 
 
     <script src="./js/dist/exhibit-api.js?locale=it"></script>
@@ -120,7 +120,7 @@
 
 				</div>
 				<div class="col-md-10 column">
-					<strong>Cerca</strong><div ex:role="facet" ex:facetClass="TextSearch"></div>
+					<strong>Cerca</strong><div data-ex-role="facet" data-ex-facetClass="TextSearch"></div>
 				</div>
 				<div class="col-md-1 column">
 
@@ -128,49 +128,49 @@
 			</div>
 			<div class="row clearfix">
 				<div class="col-md-7 column">
-					<div ex:role="facet" 
-					ex:facetClass="Cloud"
-					ex:expression=".tema_dati_gov" 
-					ex:facetLabel="Categoria"
-					ex:sortMode="count"></div>
+					<div data-ex-role="facet" 
+					data-ex-facetClass="Cloud"
+					data-ex-expression=".tema_dati_gov" 
+					data-ex-facetLabel="Categoria"
+					data-ex-sortMode="count"></div>
 				</div>
 				<div class="col-md-2 column">
-					<div ex:role="facet" 
-					ex:expression=".formato" 
-					ex:facetLabel="Formato"
-					ex:sortMode="count"></div>
+					<div data-ex-role="facet" 
+					data-ex-expression=".formato" 
+					data-ex-facetLabel="Formato"
+					data-ex-sortMode="count"></div>
 				</div>
 				<div class="col-md-3 column">
-					<div ex:role="facet" 
-					ex:expression=".keywords" 
-					ex:facetLabel="Parole chiave"
-					ex:sortMode="count"></div>
+					<div data-ex-role="facet" 
+					data-ex-expression=".keywords" 
+					data-ex-facetLabel="Parole chiave"
+					data-ex-sortMode="count"></div>
 				</div>
 			</div>
 			<div class="row clearfix">
 				<div class="col-md-12 column">
 
-					<div ex:role="viewPanel" style="padding: 0in;">
+					<div data-ex-role="viewPanel" style="padding: 0in;">
 
 
-						<div ex:role="exhibit-view" 
-						ex:viewClass="Exhibit.TabularView"  
-						ex:label="Table"  
-						ex:columns=".label,.descrizione,.ufficio,.formato,.URL_pubblicazione"  
-						ex:columnLabels="Nome, Descrizione,Ufficio titolare,Formato,Dataset" 
-						ex:columnFormats="list,list,list,list,list"
-						ex:sortColumn="0"
-						ex:sortAscending="true"
-						ex:tableStyler="tableStyler"> 
-						<div ex:role="exhibit-lens">
+						<div data-ex-role="exhibit-view" 
+						data-ex-viewClass="Exhibit.TabularView"  
+						data-ex-label="Table"  
+						data-ex-columns=".label,.descrizione,.ufficio,.formato,.URL_pubblicazione"  
+						data-ex-columnLabels="Nome, Descrizione,Ufficio titolare,Formato,Dataset" 
+						data-ex-columnFormats="list,list,list,list,list"
+						data-ex-sortColumn="0"
+						data-ex-sortAscending="true"
+						data-ex-tableStyler="tableStyler"> 
+						<div data-ex-role="exhibit-lens">
 							<div class="table-responsive">
-								<table class="table" ex:class-content=".territorio">
+								<table class="table" data-ex-class-content=".territorio">
 									<tr>
-										<td><a ex:href-content=".pagina_web" ex:onclick-subcontent="trackOutboundLink('{{.pagina_web}}'); return false;" target="_blank"><strong><span ex:content=".label" class="petrusino"></strong></span></a></td>
-										<td><span ex:content=".descrizione"></td>
-										<td><span ex:content=".ufficio"></td>
-										<td><span ex:content=".formato"></td>
-										<td><a ex:if-exists=".URL_pubblicazione" ex:href-content=".URL_pubblicazione" target="_blank">Apri</a></td>
+										<td><a data-ex-href-content=".pagina_web" data-ex-onclick-subcontent="trackOutboundLink('{{.pagina_web}}'); return false;" target="_blank"><strong><span data-ex-content=".label" class="petrusino"></strong></span></a></td>
+										<td><span data-ex-content=".descrizione"></td>
+										<td><span data-ex-content=".ufficio"></td>
+										<td><span data-ex-content=".formato"></td>
+										<td><a data-ex-if-exists=".URL_pubblicazione" data-ex-href-content=".URL_pubblicazione" target="_blank">Apri</a></td>
 									</tr>
 								</table>
 							</div>
