@@ -10,6 +10,7 @@
     <!ENTITY dcterms "http://purl.org/dc/terms/" >
     <!ENTITY dcat "http://www.w3.org/ns/dcat#" >
     <!ENTITY org "http://www.w3.org/ns/org#" >
+    <!ENTITY vocab "http://nonportale.opendatasicilia.it/ontology/" >
 ]>
 
 <rdf:RDF xml:base="http://nonportale.opendatasicilia.it/ontology/" 
@@ -23,7 +24,8 @@
      xmlns:time="&time;"
      xmlns:dcat="&dcat;"
      xmlns:org="&org;"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vocab="&vocab;">
      
     <owl:Ontology rdf:about="ontology">
         <dc:creator rdf:resource="http://opendatahacklab.org/ontology/people/cristianolongo"/>
@@ -43,4 +45,15 @@
 		<foaf:mbox rdf:resource="mailto:longo@dmi.unict.it"/>
 		<foaf:mbox rdf:resource="mailto:cristianolongo@gmail.com" />
     </foaf:Person>
+    
+    <!-- we introduce two subproperties of dcat:theme to distinguish between
+    	main theme and subtheme -->
+    	
+    <owl:ObjectProperty rdf:about="&vocab;mainTheme">
+        <rdfs:subPropertyOf rdf:resource="&dcat;theme"/>
+    </owl:ObjectProperty>
 
+    <owl:ObjectProperty rdf:about="&vocab;subTheme">
+        <rdfs:subPropertyOf rdf:resource="&dcat;theme"/>
+    </owl:ObjectProperty>
+    

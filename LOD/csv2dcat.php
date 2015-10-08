@@ -10,7 +10,46 @@
  * 
  * @author Cristiano Longo
  */
- 
+
+//some constants for columns in the source csv
+
+define('TITLE_COL', '7');
+define('DESCRIPTION_COL', '8');
+//TODO themes
+define('LANDING_PAGE_COL', '10');
+define('DOWNLOAD_URL_COL', '11');
+define('FORMAT_COL', '12');
+
+//a value use to indicate that the distribution refers to a service
+define('SERVICE_MEDIA_TYPE','db');
+/**
+ * Get the n-th field in the row, if any and if it is not empty.
+ * 
+ * @param $row a string array
+ * @param $n a position in the string array (starting from 0)
+ * @return the value of the n-th field in the row array, if exists and
+ * it is not empty. Null otherwise.
+ */
+function getField($row, $n){
+	if (count($row)<=$n)
+		return null;
+	$value=$row[$n];
+	if ($value!=null && strlen($value)>0)
+		return trim($value);
+	return null;
+}
+
+/**
+ * Check whether the string provided as parameter is a recognized
+ * media type.
+ * 
+ * @param string $mediaType may be null
+ */
+function isIANAMediaType($mediaType){
+	//TODO write me
+	return $mediaType!=SERVICE_MEDIA_TYPE;
+}
+
 $header=file_get_contents('header.owl.part');
 echo $header;
  
@@ -36,9 +75,10 @@ while( $row = fgetcsv($handle,2000,"\t") ){
 	if (count($row)<11) 
 		echo "<!-- invalid number of columns in row $id -->\n";
 	
-	$title = $row[7];
-	$description = $row[8];
-	$home= $row[10];
+	$title = $row[TITLE_COL];
+	$description = $row[DESCRIPTION_COL];
+	$home= $row[LANDING_PAGE_COL];
+		
 //	$creator = urlencode($row[1]);
 //	$creator_name=utf8_encode(htmlentities($row[1],ENT_COMPAT,'utf-8'));
 	
@@ -59,27 +99,49 @@ while( $row = fgetcsv($handle,2000,"\t") ){
 		echo "\t\t<dcat:landingPage rdf:resource=\"".htmlentities($home)."\" />\n";	
 
 	if ($new_theme){
-		echo "\t\t<dcat:theme>\n";
+		echo "\t\t<vocab:mainTheme>\n";
 		echo "\t\t\t<skos:Concept rdf:about=\"$theme_url\">\n";
 		echo "\t\t\t\t<rdfs:label>$theme_name</rdfs:label>\n";
 		echo "\t\t\t\t<skos:prefLabel>$theme_name</skos:prefLabel>\n";
 		echo "\t\t\t</skos:Concept>\n";
-		echo "\t\t</dcat:theme>\n";
+		echo "\t\t</vocab:mainTheme>\n";
 		$processed_themes[$theme_url]=true;
 	} else 
-		echo "\t\t<dcat:theme rdf:resource=\"$theme_url\" />\n";
+		echo "\t\t<vocab:mainTheme rdf:resource=\"$theme_url\" />\n";
 
 	if ($new_subtheme){
-		echo "\t\t<dcat:theme>\n";
+		echo "\t\t<vocab:subTheme>\n";
 		echo "\t\t\t<skos:Concept rdf:about=\"$subtheme_url\">\n";
 		echo "\t\t\t\t<rdfs:label>$subtheme_name</rdfs:label>\n";
 		echo "\t\t\t\t<skos:prefLabel>$subtheme_name</skos:prefLabel>\n";
 		echo "\t\t\t\t<skos:broader rdf:resource=\"$theme_url\" />\n";
 		echo "\t\t\t</skos:Concept>\n";
-		echo "\t\t</dcat:theme>\n";
+		echo "\t\t</vocab:subTheme>\n";
 		$processed_themes[$subtheme_url]=true;
 	} else
-		echo "\t\t<dcat:theme rdf:resource=\"$subtheme_url\" />\n";
+		echo "\t\t<vocab:subTheme rdf:resource=\"$subtheme_url\" />\n";
+	
+	$downloadURL=getField($row, DOWNLOAD_URL_COL);
+	$mediaType=getField($row, FORMAT_COL);
+	$isService=$mediaType!=null && 'db'==$mediaType;
+	
+	if ($downloadURL!=null){
+		$downloadURLRefined=htmlentities($downloadURL); 
+		echo "\t\t<dcat:distribution>\n";
+		echo "\t\t\t<dcat:Distribution rdf:about=\"".$id."dist\">\n";
+		
+		//discriminate download files from services
+		$downloadURLProperty=$isService ? "dcat:accessURL" :  "dcat:downloadURL";
+		echo "\t\t\t\t<$downloadURLProperty rdf:resource=\"$downloadURLRefined\" />\n";
+		
+		//check if it is a valid media type
+		if (isIANAMediaType($mediaType))
+			echo "\t\t\t\t<dcat:mediaType>$mediaType</dcat:mediaType>\n";
+			
+		echo "\t\t\t</dcat:Distribution>\n";
+		echo "\t\t</dcat:distribution>\n";
+	}
+	
 	
 /* 	echo "\t\t<dc:creator>\n";
 	echo "\t\t\t<foaf:Agent rdf:about=\"".$creator."\">\n";
