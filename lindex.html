@@ -91,77 +91,108 @@
 <div class="row clearfix">
 	<div class="col-md-9 column">
 		<section id="intro">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis risus ac enim porttitor finibus vitae sit amet urna. Aenean sed ligula eu magna faucibus consequat vitae vitae nisl. Nam viverra est non nisi accumsan condimentum. Mauris vel nisl in est gravida convallis. Quisque eu neque sit amet tellus sodales dapibus. Aenean elit dolor, sodales id orci at, fermentum consectetur orci. Duis ornare sodales lacus, a consectetur risus fringilla imperdiet. Donec at viverra felis.</p>
+		
+		<p>L'elenco presentato in questo progetto &egrave; disponibile come
+		<a href="https://docs.google.com/spreadsheets/d/15cFU9v2x3ACb1IPcVE9Xg3wc5fuay8NAYDXQnoMcOFw/edit#gid=968762763">foglio Google Doc</a>.
+		A partire da questo, &egrave; stata inoltre generata una <em>ontologia <a href="http://www.w3.org/standards/techs/owl">OWL</a></em>
+		che viene messa a disposizione in due modalit&agrave:</p>
+		<ul>
+			<li>file scaricabile (formato RDF/XML) <code><a href="LOD/nonportale.owl" title="file scaricabile contenente l'ontologia">nonportale.owl</a></code>;</li>
+			<li>endpoint SPARQL (fornito da <a href="http://dydra.com">Dydra</a>): <code><a href="http://dydra.com/cristianolongo/dataset-regione-sicilia-ods15/sparql">http://dydra.com/cristianolongo/dataset-regione-sicilia-ods15/sparql</a></code>.</li>
+		</ul>
+		
+		<p>Nell'ontologia i vari dataset elencati nel portale sono descritti mediante il vocabolario 
+		<a href="http://www.w3.org/TR/vocab-dcat/">DCAT</a> seguendo inoltre le indicazioni riportate nella
+		<em>Guida sintetica per lo scambio di dati con il catalogo nazionale Open Data DATI.GOV.IT (versione 1.3)</em>.
+		</p>	
+		
+		<p>L'ontolgia viene generata attraverso il processo illustrato nel seguito. 
+		Innanzitutto, il foglio elettronico google viene esportato in <code>TSV</code> 
+		(<code>CSV</code> in cui il carattere di tabulazione &egrave; usato come separatore).
+		Il file di testo cos&igrave; ottenuto viene processato con lo script 
+		<code>csv2dcat.php</code>, i cui sorgenti sono disponibili su questo sito nella cartella LOD.
+		<code>csv2dcat.php</code> &egrave; uno script PHP che deve essere eseguito da riga 
+		di comando fornendo sullo standard input il file <code>TSV</code> ottenuto in precedenza
+		e restituisce sullo standard output l'ontologia in OWL (serializzazione RDF/XML).</p>
+		
+		<pre>
+$ php csv2dcat.php &lt;nonportale.tsv &gt;nonportale.owl</pre>
+	
+		<p>L'ontologia cos&igrave; ottenuta &egrave; quella presente sul sito. Essa viene
+		successivamente arricchita effettuando tutte le inferenze semantiche  
+		attraverso un <em>reasoner</em>. Nel nostro caso &egrave; stato utilizzato il
+		reasoner <a href="https://github.com/complexible/pellet">pellet</a>, versione 2.3.0.
+		In questo caso, l'ontologia deve essere passata come primo argomento mentre una 
+		seconda ontologia, contenente solo le affermazioni <em>inferite</em>, viene restituita 
+		sullo standard output (nell'esempio che segue, rediretto su un file <code>nonportale_inf.owl</code>).</p>
+		<pre>
+$ sh pellet.sh extract --statements AllStatements -v nonportale.owl >nonportale_inf.owl</pre>
+		
+		<p>Infine, sia l'ontologia originaria (indicata negli esempi con <code>nonportale.owl</code>)
+		che quella contente le asserzioni inferite (<code>nonportale_inf.owl</code>) vengono importate
+		sul <a href="http://dydra.com/cristianolongo/dataset-regione-sicilia-ods15">repository Dydra</a>, 
+		divenendo quindi accessibili tramite interrogazioni SPARQL. Si noti che nello stesso repository
+		sono presenti alcune query di esempio.</p>		
+		
+			<p>L'elenco che segue viene generato in javascript, utilizzando il <a href="http://opendatahacklab.github.io/sparql_suite/#dcat">DCAT Processor</a>
+			messo a disposizione dalla <a href="http://opendatahacklab.github.io/sparql_suite">SPARQL Suite</a>, interrogando 
+			appunto l'endpoint SPARQL. Riportiamo codice utilizzato in questa pagina per generare l'elenco (NB: 
+			per riutilizzare questo codice &egrave; necessario importare la SPARQL suite nella propria pagina).</p>
 
-			<p>Proin congue purus tellus, et aliquet tellus elementum condimentum. Aliquam eget erat risus. Mauris imperdiet, elit id tincidunt porta, risus orci lacinia ante, quis sodales quam velit placerat enim. Nunc mauris sem, cursus non metus et, luctus porttitor odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec ut ligula vel neque faucibus tempor a eget elit. Proin blandit nibh eu lacus congue euismod. Vivamus ut sem vel nibh euismod posuere. Mauris auctor semper nunc, molestie gravida sem blandit ac. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc vitae commodo tellus, eu elementum libero. Aliquam dignissim auctor nisl in egestas.</p>
+			<pre>
+&lt;section id=&quot;listing&quot;&gt;
+	&lt;p class=&quot;loading&quot; id=&quot;loading&quot;&gt;Loading ...&lt;/p&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+		var loadingItem = document.getElementById(&quot;loading&quot;);
+		var container = document.getElementById(&quot;listing&quot;);
+		var processor = createDCAT2HTMLProcessor(container, loadingItem, null, null);
+		sparql_query(&quot;http://dydra.com/cristianolongo/dataset-regione-sicilia-ods15/sparql&quot;, processor);
+	&lt;/script&gt;						
+&lt;/section&gt
+</pre>			
+		
 		</section>
+		
+		<section id="credits">
+				<header><h2>Credits</h2></header>
+				<ol class="iconlist">
+					<!--  li><img src="img/logo_opendatasicilia_black.png" /> 
+						Il logo di Open Data Sicilia utilizzato in questa pagina &egrave; stato ricavato modificando quello
+						fornito dal kit di comunicazione presente sul <a href="https://github.com/SiciliaHub/opendatasicilia-blog.git">repository
+						del blog opendatasicilia</a>.</li -->
+
+						<li><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/External_link_font_awesome.svg"> Il simbolo utilizzato per indicare la landing page del dataset &egrave;
+							fornito da wikicommons con le seguenti indicazioni di attribuzione: <em>Font Awesome by Dave Gandy 
+							- http://fortawesome.github.com/Font-Awesome [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], 
+							via Wikimedia Commons</em>.</li>
+						</ol>
+						<p class="top"><a href="#top">Torna Su</a></p>		
+		</section>
+		
 	</div>
 	<div class="col-md-3 column">
 		<p class="subtitle">Powered by 
 			<a href="http://github.com"><img style="background-color : white" alt="GitHub" src="http://opendatahacklab.github.io/imgs/GitHub_Logo.png" /></a>
 			<a href="http://dydra.com"><img alt="dydra.com" src="http://opendatahacklab.github.io/imgs/dydra-logo-24pt.png" /></a>
 		</p>
-		<nav>
-			<a href="#license">Licenza</a> - 
-			<a href="#credits">Credits</a> 
-			<a href="https://github.com/opendatahacklab/nonportaleregionesicilia.git" alt="Source Code" title="GitHub repository"><img src="img/GitHub-Mark-Light-64px.png" /></a>
-			<a href="#data" title="Open Data"><img  src="img/rdf_white.png" /></a>
-		</nav>
 	</div>
 </div>
 <div class="row clearfix">
 
 	<div class="col-md-12 column">
 
-		<section id="datasets">
-			<p id="count"></p>
-			<p class="loading" id="loading">Loading ...</p>
-		</section>
 		<section id="listing">
+			<header><h2>Dataset Elencati nell'Ontologia</h2></header>
+			<p class="loading" id="loading">Loading ...</p>
 			<script type="text/javascript">
 			var loadingItem = document.getElementById("loading");
-			var container = document.getElementById("datasets");
+			var container = document.getElementById("listing");
 			var processor = createDCAT2HTMLProcessor(container, loadingItem, null, null);
 			sparql_query("http://dydra.com/cristianolongo/dataset-regione-sicilia-ods15/sparql", processor);
 			</script>						
 			<p class="top"><a href="#top">Torna Su</a></p>
 		</section>
-		<section id="data">
-			<header><h2>Accesso ai Dati</h2></header>
-			<p>L'elenco presentato in questa pagina &egrave; disponibile come
-				<a href="https://docs.google.com/spreadsheets/d/15cFU9v2x3ACb1IPcVE9Xg3wc5fuay8NAYDXQnoMcOFw/edit#gid=968762763">foglio Google Doc</a>.
-				A partire da questo, &egrave; stata generata, usando lo script <code>csv2dcat.php</code>,
-				una <a href="datasetRegioneSiciliana.owl">ontologia</a> <a href="http://www.w3.org/TR/owl2-primer/">OWL2</a> nella
-				quale il vocabolario <a href="http://www.w3.org/TR/vocab-dcat/">DCAT</a> viene impiegato 
-				per modellare i dataset. Sono state poi effettuate tutte le inferenze semantiche dall'ontologia 
-				attraverso il reasoner <a href="https://github.com/complexible/pellet">pellet</a>.
-				L'ontologia cos&igrave; arricchita &egrave; stata infine caricata su un repository
-				messo a disposizione da <a href="http://dydra.com">Dydra</a>. Tale repository
-				fornisce anche un <a href="http://dydra.com/cristianolongo/dataset-regione-sicilia-ods15/sparql">endpoint SPARQL</a>
-				che pu&ograve; essere liberamente interrogato.</p>
-			</section>
 
-			<section id="license">
-				<header><h2>Licenza</h2></header>
-				<p>I sorgenti del sito e tutti i dati contenuti nell'ontologia e nel documento google 
-					sono rilasciati con licenza <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
-				</section>	
-
-				<section id="credits">
-					<header><h2>Credits</h2></header>
-					<ol class="iconlist">
-						<li><img src="img/logo_opendatasicilia_black.png" /> 
-							Il logo di Open Data Sicilia utilizzato in questa pagina &egrave stato ricavato modificando quello
-							fornito dal kit di comunicazione presente sul <a href="https://github.com/SiciliaHub/opendatasicilia-blog.git">repository
-							del blog opendatasicilia</a>.</li>
-
-							<li><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/External_link_font_awesome.svg"> Il simbolo utilizzato per indicare la landing page del dataset &egrave;
-								fornito da wikicommons con le seguenti indicazioni di attribuzione: <em>Font Awesome by Dave Gandy 
-								- http://fortawesome.github.com/Font-Awesome [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], 
-								via Wikimedia Commons</em>.</li>
-							</ol>
-							<p class="top"><a href="#top">Torna Su</a></p>		
-						</section>
 					</div>
 
 
