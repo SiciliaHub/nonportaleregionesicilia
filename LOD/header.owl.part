@@ -13,7 +13,7 @@
     <!ENTITY vocab "http://nonportale.opendatasicilia.it/ontology/" >
 ]>
 
-<rdf:RDF xml:base="http://nonportale.opendatasicilia.it/ontology/" 
+<rdf:RDF xml:base="http://nonportale.opendatasicilia.it/LOD/" 
 	 xmlns:dc="&dc;"
      xmlns:rdfs="&rdfs;"
      xmlns:foaf="&foaf;"
