@@ -4,4 +4,4 @@ Il NON-Portale Open Data della Regione Siciliana vuole essere un unico punto di 
 
 La costruzione è iniziata durante l'hackaton di [**#ODS15**](https://github.com/SiciliaHub/ods15/wiki) ed è stato lanciato il 12 ottobre del 2015.
 
-L'URL è [http://nonportale.opendatasicilia.it/](http://nonportale.opendatasicilia.it/)
+L'**URL** è **[http://nonportale.opendatasicilia.it/](http://nonportale.opendatasicilia.it/)**
