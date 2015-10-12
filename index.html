@@ -154,11 +154,11 @@
 						<div ex:role="exhibit-view" 
 						ex:viewClass="Exhibit.TabularView"  
 						ex:label="Table"  
-						ex:columns=".label,.descrizione,.ufficio,.formato,.URL_pubblicazione"  
-						ex:columnLabels="Nome, Descrizione,Ufficio titolare,Formato,Dataset" 
+						ex:columns=".label,.descrizione,.ufficio,.formato,.URL_pubblicazione,.data_inserimento"  
+						ex:columnLabels="Nome, Descrizione,Ufficio titolare,Formato,Dataset,Data inserimento" 
 						ex:columnFormats="list,list,list,list,list"
-						ex:sortColumn="0"
-						ex:sortAscending="true"
+						ex:sortColumn="5"
+						ex:sortAscending="false"
 						ex:tableStyler="tableStyler"> 
 						<div ex:role="exhibit-lens">
 							<div class="table-responsive">
@@ -169,6 +169,7 @@
 										<td><span ex:content=".ufficio"></td>
 										<td><span ex:content=".formato"></td>
 										<td><a ex:if-exists=".URL_pubblicazione" ex:href-content=".URL_pubblicazione" target="_blank">Apri</a></td>
+										<td><span ex:content=".data_inserimento"></td>
 									</tr>
 								</table>
 							</div>
