@@ -23,6 +23,11 @@
   	<!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <![endif]-->
+	
+	<!-- fontawesome  -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<!-- fontawesome  -->
+
 
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
@@ -154,9 +159,9 @@
 						<div ex:role="exhibit-view" 
 						ex:viewClass="Exhibit.TabularView"  
 						ex:label="Table"  
-						ex:columns=".label,.descrizione,.ufficio,.formato,.URL_pubblicazione,.data_inserimento"  
-						ex:columnLabels="Nome, Descrizione,Ufficio titolare,Formato,Dataset,Ultimo aggiornamento" 
-						ex:columnFormats="list,list,list,list,list"
+						ex:columns=".label,.descrizione,.ufficio,.formato,.URL_pubblicazione,.data_inserimento,.URLDatoOpen,.URLElaborazione"  
+						ex:columnLabels="Nome, Descrizione,Ufficio titolare,Formato,Dataset,Ultimo aggiornamento,Dato Aperto,Rielaborazione" 
+						ex:columnFormats="list,list,list,list,list,list,list"
 						ex:sortColumn="5"
 						ex:sortAscending="false"
 						ex:tableStyler="tableStyler"> 
@@ -170,6 +175,8 @@
 										<td><span ex:content=".formato"></td>
 										<td><a ex:if-exists=".URL_pubblicazione" ex:href-content=".URL_pubblicazione" target="_blank">Apri</a></td>
 										<td><span ex:content=".data_inserimento"></td>
+										<td align="center"><span ex:content="if(exists(.URLDatoOpen), concat('<a target=\'blank\' href=',.URLDatoOpen,'><i class=\'fa fa-link\' aria-hidden=\'true\'></i></a>'), '')"></span></td>
+										<td align="center"><span ex:content="if(exists(.URLElaborazione), concat('<a  target=\'blank\' href=',.URLElaborazione,'><i class=\'fa fa-area-chart\' aria-hidden=\'true\'></i></a>'), '')"></span></td>
 									</tr>
 								</table>
 							</div>
