@@ -76,6 +76,9 @@ a {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
-    height: :15px;
+    
+}
+#gsc-i-id1 {
+  height: :15px;
 }
 /*google custom search*/
