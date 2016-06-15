@@ -65,3 +65,16 @@ a {
     visibility: hidden !important;
 }
 /* rimosso momentaneamente export tool */
+
+
+/*google custom search*/
+#cse {
+    width: 60%; /* make sure you don't use inline width */
+    margin: 0 auto;
+}
+.cse .gsc-search-button input.gsc-search-button-v2, input.gsc-search-button-v2 {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+/*google custom search*/
