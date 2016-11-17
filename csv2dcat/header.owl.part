@@ -32,6 +32,7 @@
         <rdfs:label>nonportale Regione Siciliana</rdfs:label>
         <rdfs:comment>Una collezione non ufficiale di dataset e dati messi a 
         disposizione in vario modo dalla Regione Siciliana.</rdfs:comment>
+		<dcterms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>		        
         <owl:imports rdf:resource="http://www.w3.org/ns/org"/>
         <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
 		<owl:imports rdf:resource="http://www.w3.org/2006/time" />

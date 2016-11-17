@@ -13,12 +13,17 @@
 
 //some constants for columns in the source csv
 
-define('TITLE_COL', '7');
-define('DESCRIPTION_COL', '8');
+define('SHEET_URL','https://docs.google.com/spreadsheets/d/15cFU9v2x3ACb1IPcVE9Xg3wc5fuay8NAYDXQnoMcOFw/export?format=tsv&exportFormat=tsv&ndplr=1');
+define('THEME_URL_COL', '5');
+define('THEME_LABEL_COL', '4');
+define('SUBTHEME_URL_COL', '7');
+define('SUBTHEME_LABEL_COL', '6');
+define('TITLE_COL', '9');
+define('DESCRIPTION_COL', '10');
 //TODO themes
-define('LANDING_PAGE_COL', '10');
-define('DOWNLOAD_URL_COL', '11');
-define('FORMAT_COL', '12');
+define('LANDING_PAGE_COL', '12');
+define('DOWNLOAD_URL_COL', '13');
+define('FORMAT_COL', '14');
 
 //a value use to indicate that the distribution refers to a service
 define('SERVICE_MEDIA_TYPE','db');
@@ -82,12 +87,12 @@ while( $row = fgetcsv($handle,2000,"\t") ){
 //	$creator = urlencode($row[1]);
 //	$creator_name=utf8_encode(htmlentities($row[1],ENT_COMPAT,'utf-8'));
 	
-	$theme_url=$row[4];
-	$theme_name=$row[3];
+	$theme_url=$row[THEME_URL_COL];
+	$theme_name=$row[THEME_LABEL_COL];
 	$new_theme=!array_key_exists($theme_url, $processed_themes);
 		
-	$subtheme_url=$row[6];
-	$subtheme_name=$row[5];
+	$subtheme_url=$row[SUBTHEME_URL_COL];
+	$subtheme_name=$row[SUBTHEME_LABEL_COL];
 	$new_subtheme=!array_key_exists($subtheme_url, $processed_themes);
 	
 	echo "\t<dcat:Dataset rdf:about=\"$id\">\n";
