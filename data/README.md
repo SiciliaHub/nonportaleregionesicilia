@@ -12,6 +12,8 @@ I dati sono accessibili in formato CSV attraverso questo URL:
 
 [https://docs.google.com/spreadsheets/d/19tfYTm2jFsxftCEkRu7ZjUPirxrWB5BELPvcWKIt92U/gviz/tq?tqx=out:csv&tq=select+A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W&gid=0](https://docs.google.com/spreadsheets/d/19tfYTm2jFsxftCEkRu7ZjUPirxrWB5BELPvcWKIt92U/gviz/tq?tqx=out:csv&tq=select+A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W&gid=0)
 
+L'encoding è `UTF-8` e il separatore la `,`.
+
 ### CSV Dialect Description Format (CSVDDF)
 
 ```JSON
@@ -20,6 +22,6 @@ I dati sono accessibili in formato CSV attraverso questo URL:
   "delimiter": ",",
   "doubleQuote": true,
   "lineTerminator": "\n",
-  "header": true
+  "header": true,
 }
 ```
