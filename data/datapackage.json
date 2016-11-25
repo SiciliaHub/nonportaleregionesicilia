@@ -1,67 +1,138 @@
 {
-    "name": "Petrusino",
-    "title": "Petrusino ... perché certi siti, apps, mappe, servizi sono un po' come il prezzomolo e non è facili distinguerli ...",
-    "description": "Petrusino è un catalogo multitematico di siti web, applicazioni per dispositivi mobili, mappe online, servizi web e infografiche. È stato realizzato per permetterne una più facile individuazione ai più diversi tipi di utenza: cittadini, imprese, associazioni, turisti, studiosi, ecc..",
-    "homepage": "http://petrusino.opendatasicilia.it/",
-    "licenses": [
-        {
-            "id": "CC BY-SA",
-            "name": "CC BY-SA",
-            "version": "4",
-            "url": "http://creativecommons.org/licenses/by-sa/4.0/"
-        }
-    ],
-    "resources": [
-        {
-            "url": "https://spreadsheets.google.com/tq?tqx=out:csv&tq=SELECT%20A%2CB%2CC%2CD%2CE%2CF%2CG&key=1H38J-cLEAt8VhDuhMvJgSGH4KzT0LrhFl9tvGTQpqWI",
-            "format": "csv",
-            "mediatype": "text/csv",
-            "schema": {
-                "fields": [
-                    {
-                        "index": 0,
-                        "name": "{label}",
-                        "description": "Nome della risorsa",
-                        "type": "string"
-                    },
-                    {
-                        "index": 1,
-                        "name": "{tipo}",
-                        "description": "Tipologia di risorsa",
-                        "type": "string"
-                    },
-                    {
-                        "index": 2,
-                        "name": "{categoria}",
-                        "description": "Categorie a cui è associata la risorsa",
-                        "type": "string"
-                    },
-                    {
-                        "index": 3,
-                        "name": "{tag}",
-                        "description": "Tag a cui è associata la risorsa",
-                        "type": "string"
-                    },
-                    {
-                        "index": 4,
-                        "name": "{descrizione:single}",
-                        "description": "Descrizione della risorsa",
-                        "type": "string"
-                    },
-                    {
-                        "index": 5,
-                        "name": "{territorio}",
-                        "description": "Territorio in cui è utile la risorsa",
-                        "type": "string"
-                    },
-                    {
-                        "index": 6,
-                        "name": "{URL}",
-                        "description": "URL della risorsa",
-                        "type": "string"
-                    }
-                ]
-            }
-        }
-    ]
+  "name": "nonportaleregionesiciliana",
+  "title": "Non portale Regione Siciliana",
+  "description": "Il NON-Portale Open Data della Regione Siciliana vuole essere un unico punto di accesso ai dati (in formato aperto e non) della Regione Siciliana che sono distribuiti in decine di siti.",
+  "homepage": "http://nonportale.opendatasicilia.it/",
+  "version": "1.0",
+  "license": "CCBY4",
+  "author": "OpenDataSicilia",
+  "resources": [
+    {
+      "name": "data",
+      "title": "Data",
+      "schema": {
+        "fields": [
+          {
+            "name": "{id}",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "{ufficio}",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "{Codice_IPA}",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "{Codice_Univoco_Ufficio}",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "{tema_dati_gov}",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "{tema_eurovoc}",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "{tema_eurovoc_URL}",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "{sottotema_eurovoc_label}",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "{sottotema_eurovoc_URL}",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "{label}",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "{descrizione}",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "{keywords}",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "{pagina_web}",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "{URL_pubblicazione}",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "{formato}",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "{licenza_riutilizzo}",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "{localizzazione}",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "{data_ultimo_aggiornamento}",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "{frequenza_aggiornamento}",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "{obbligo_di_pubblicazione}",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "{altro}",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "{data_inserimento}",
+            "type": "datetime",
+            "format": "default"
+          },
+          {
+            "name": "{DBpediaCategories}",
+            "type": "any",
+            "format": "default"
+          }
+        ]
+      },
+      "url": "https://docs.google.com/spreadsheets/d/19tfYTm2jFsxftCEkRu7ZjUPirxrWB5BELPvcWKIt92U/gviz/tq?tqx=out:csv&tq=select+A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W&gid=0",
+      "format": "CSV",
+      "mediatype": "text/csv",
+      "encoding": "UTF-8"
+    }
+  ]
 }
