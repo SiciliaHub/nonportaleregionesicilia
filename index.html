@@ -48,15 +48,7 @@
 
     <script src="./js/dist/exhibit-api.js?locale=it"></script>
 
-    <script>
-
-var trackOutboundLink = function(url) {
-   ga('send', 'event', 'outbound', 'click', url, {
-     'transport': 'beacon',
-     'hitCallback': function(){window.open(url, '_blank');}
-   });
-}
- </script>
+ 
 
     <script type="text/javascript" src="./js/ga.js"></script>
 
@@ -65,6 +57,21 @@ var trackOutboundLink = function(url) {
     	$(table).addClass("table table-condensed table-striped");
     };
     </script>
+	
+	<script>
+/**
+* Function that tracks a click on an outbound link in Analytics.
+* This function takes a valid URL string as an argument, and uses that URL string
+* as the event label. Setting the transport method to 'beacon' lets the hit be sent
+* using 'navigator.sendBeacon' in browser that support it.
+*/
+var trackOutboundLink = function(url) {
+   ga('send', 'event', 'outbound', 'click', url, {
+     'transport': 'beacon',
+     'hitCallback': function(){window.open(url, '_blank');}
+   });
+}
+ </script>
 
 
 </head>
